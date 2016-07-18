@@ -1,0 +1,11 @@
+{
+  "name": "ebrc/ebrc_java",
+  "version": "0.1.0",
+  "author": "ebrc",
+  "summary": "Install Java for EuPathDB BRC",
+  "license": "Apache-2.0",
+  "source": "https://github.com/EuPathDB/puppet-ebrc_java",
+  "project_page": "https://github.com/EuPathDB/puppet-ebrc_java",
+  "issues_url": "https://github.com/EuPathDB/puppet-ebrc_java/issues",
+  "dependencies": []
+}
