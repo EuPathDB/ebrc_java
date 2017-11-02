@@ -21,6 +21,7 @@ class ebrc_java (
   $packages,
   $java_home,
   $default_ver = '/usr/java/latest',
+  $truststore = ''
 ) {
 
   package { $packages :
@@ -38,6 +39,11 @@ class ebrc_java (
       ensure => 'link',
       target => $default_ver,
     }
+  }
+
+  file { '/etc/.java/gusjvm.properties':
+    ensure  => present,
+    content => template('ebrc_java/gusjvm.properties')
   }
 
 }
