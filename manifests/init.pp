@@ -46,4 +46,14 @@ class ebrc_java (
     content => template('ebrc_java/gusjvm.properties')
   }
 
+  # because old tomcats expect this path to exist, we create the link here.
+  # can be removed when we are on a modern tomcat (RM 37205)
+  if $java_home == "/usr/lib/jvm/jre-11" {
+    file { "${java_home}/lib/amd64":
+      ensure => link,
+      target => '.',
+      force  => false,
+    }
+  }
+
 }
